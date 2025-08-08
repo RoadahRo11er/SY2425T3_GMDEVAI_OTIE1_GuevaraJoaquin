@@ -151,8 +151,9 @@ public class EnemyMovement : MonoBehaviour
         switch (agentState)
         {
             case AgentState.Seeker:
-                if (canSeeTarget() && playerStats.hasGem == true)
+                if (canSeeTarget())
                 {
+                    Debug.Log("Seek");
                     Seek(target.transform.position);
                 }
                 else
